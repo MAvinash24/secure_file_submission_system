@@ -150,7 +150,9 @@ Choose an option:
 You will be prompted to enter a username and password, and the user will be registered in the Users table of the MySQL database.
 
 Enter username: avatar
+
 Enter password: password123
+
 User registered successfully with ID: **1**
 
 Option 2: Upload a file:
@@ -158,9 +160,13 @@ Option 2: Upload a file:
 You will be prompted to enter a user ID, file name, and passphrase for encryption. The selected file, which can be a small .txt file or an image file in .png, .jpg, or .jpeg format, will be encrypted using AES-256-CBC and saved in the database.
 
 Enter user ID: **1**
+
 Enter file name: example.txt
+
 Enter passphrase for encryption: my_secure_key
+
 Uploading[#######################################################################........92%]
+
 File uploaded and saved to database successfully!
 
 Option 3: Exit the program.
@@ -171,4 +177,5 @@ This flow demonstrates the basic working of your secure_file_submission_system. 
 # NOTE:
 
 Make sure to update the MySQL (MariaDB) service credentials in the Database class constructor within database.cpp . Replace them with the correct username ("root") and password ("kali") to ensure a successful connection to the database.
+Additionally, ensure that the same user ID from the user registration process is used for file uploads to maintain proper association between users and their files.
 
