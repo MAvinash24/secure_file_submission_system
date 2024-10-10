@@ -19,3 +19,4 @@ The Secure File Submission System is a C++ application designed to securely uplo
 
 ### Installation
 1. Clone the repository:
+   
