@@ -1,32 +1,27 @@
-# Prerequisites
-*.d
+# Ignore build files
+/build
+/bin
 
-# Compiled Object files
-*.slo
-*.lo
+# Ignore object files
 *.o
-*.obj
 
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
+# Ignore executable files
 *.exe
 *.out
-*.app
+
+# Ignore encrypted files
+*.enc
+
+# Ignore any temporary files
+*.tmp
+*.log
+
+# Ignore IDE and editor specific files
+.vscode/
+*.swp
+*.swo
+*.DS_Store
+
+# Ignore OpenSSL generated files
+*.pem
+*.key
