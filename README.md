@@ -52,7 +52,7 @@ sudo apt-get install libmysqlcppconn-dev
 5.Clone the repository:
 
 ```
-git clone https://github.com/MAvinash24/secure_file_submission.git
+git clone https://github.com/MAvinash24/secure_file_submission_system.git
 ```
 
 6.Navigate to the project directory and compile the code:
