@@ -1,7 +1,7 @@
 # Secure File Submission System
 
 ## Overview
-The Secure File Submission System is a C++ application designed to securely upload and store files in database using AES-256-CBC encryption. It utilizes a MySQL (MariaDB) database to manage user registrations and encrypted file storage.
+The Secure File Submission System is a C++ application designed to securely upload and store files (small .txt files and image formats such as .png, .jpg, and .jpeg) in a database using AES-256-CBC encryption. The application utilizes a MySQL (MariaDB) database to manage user registrations and store encrypted files securely.
 
 ## Features
 - User registration with username and password.
@@ -19,7 +19,7 @@ The Secure File Submission System is a C++ application designed to securely uplo
 
 ## Notice
 
-All the files should be in same directory.{database.cpp,database.h,file_encrypt.cpp,main.cpp,register.cpp,register.h}
+All files must be located in the same directory: database.cpp, database.h, file_encrypt.cpp, main.cpp, register.cpp, and register.h. Additionally, ensure that the files you wish to upload are also placed in the same directory.
 
 ### Installation
 
