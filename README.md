@@ -77,6 +77,9 @@ Then, log in to MySQL as the root user:
 mysql -u root -p
 ```
 
+You will be prompted to enter the root user's password. Type your password and press Enter (the password won't be visible for security reasons).
+
+
 8.Create and select the database:
 
 To create the database, run:
@@ -209,3 +212,50 @@ This flow demonstrates the basic working of your secure_file_submission_system. 
 Make sure to update the MySQL (MariaDB) service credentials in the Database class constructor within database.cpp . Replace them with the correct username ("root") and password ("kali") to ensure a successful connection to the database.
 Additionally, ensure that the same user ID from the user registration process is used for file uploads to maintain proper association between users and their files.
 
+# MySQL Queries to Extract Database Data
+
+ 1.Log in to MySQL as the root user:
+ 
+ Open your terminal and run the following command:
+
+ ```
+mysql -u root -p
+```
+
+You will be prompted to enter the root user's password. Type your password and press Enter (the password won't be visible for security reasons).
+
+2.Switch to the specific database:
+
+Once you're logged into MySQL, switch to the file_storage_system database:
+
+```
+USE file_storage_system;
+```
+
+3.MySQL Queries to Retrieve Data
+
+a)To check the contents of the Users table:
+
+This query will display all the records in the Users table.
+
+```
+SELECT * FROM Users;
+```
+
+b)To check the contents of the Files table:
+
+This query will display all the records in the Files table.
+
+```
+SELECT * FROM Files;
+```
+
+Since the Files table stores encrypted_content and iv in longblob format, these fields contain binary data, which can include unreadable characters and symbols. To prevent confusion when viewing the data, it’s a good idea to limit how much of this data is shown in the query results. This way, you can focus on key information without displaying the entire binary content.
+
+c)To avoid displaying large binary data:
+
+You can use this SQL query to show only the first 20 characters of both the encrypted_content and iv columns, along with other important fields like id, user_id, filename, and upload_date:
+
+```
+SELECT id, user_id, filename, SUBSTRING(encrypted_content, 1, 20) AS short_encrypted_content, SUBSTRING(iv, 1, 20) AS short_iv,upload_date FROM Files \G;
+```
