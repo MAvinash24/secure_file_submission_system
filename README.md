@@ -135,6 +135,36 @@ exit
 ./my_application
 ```
 
+## Handling Errors in database.cpp
+
+If you encounter any errors related to database access while running database.cpp, follow these steps to resolve them:
+
+1.Log in to MySQL as the root user: Open your terminal and enter the following command:
+
+```
+mysql -u root
+```
+
+2.Reset the root password:Replace your_new_password with your desired password:
+
+```
+SET PASSWORD FOR 'root'@'localhost' = PASSWORD('your_new_password');
+```
+
+3.Flush privileges: After changing the password, run the following command to ensure that the privilege changes take effect:
+
+```
+FLUSH PRIVILEGES;
+```
+
+4.Exit the MySQL shell: 
+
+```
+exit
+```
+
+5.Re-run your program: After resetting the password, try running your program again to see if the database connection issues are resolved.
+
 ## Example
 
 Sample Interaction
