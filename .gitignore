@@ -25,3 +25,9 @@
 # Ignore OpenSSL generated files
 *.pem
 *.key
+
+# Allow specific file types
+!.txt
+!.png
+!.jpg
+!.jpeg
