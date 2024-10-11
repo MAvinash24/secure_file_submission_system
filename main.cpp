@@ -1,5 +1,5 @@
 #include <iostream>
-#include "register.h"    // Include the header file instead of .cpp
+#include "register.h"    // Include the header file 
 #include "file_encrypt.cpp"  // Include the file encryption logic
 
 using namespace std;
