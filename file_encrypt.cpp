@@ -53,7 +53,7 @@ private:
         }
         iv.assign(reinterpret_cast<char*>(iv_buf), sizeof(iv_buf));
 
-        // Create key from passphrase (simple demonstration, use proper key derivation like PBKDF2 or HKDF in production)
+        // Create key from passphrase 
         unsigned char key[EVP_MAX_KEY_LENGTH];
         memset(key, 0, sizeof(key));  // Ensure key is zeroed before use
         strncpy(reinterpret_cast<char*>(key), passphrase.c_str(), sizeof(key));
