@@ -58,7 +58,7 @@ git clone https://github.com/MAvinash24/secure_file_submission_system.git
 6.Navigate to the project directory and compile the code:
 
 ```
-cd secure_file_submission_system
+cd secure_file_submission_system-main
 ```
 
 ```
